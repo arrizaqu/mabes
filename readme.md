@@ -1,1 +1,1 @@
-read me on this application of jquery
+readme after clone master
