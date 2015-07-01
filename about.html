@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>about</title>
+ </head>
+ <body>
+	<div class="siswa" id="siswa1"></div>
+	<div class="siswa" id="siswa2"></div>
+	<div class="siswa" id="siswa3"></div>
+	<div class="mahasiswa" id="siswa4"></div>
+	<div class="santri"  id="siswa5"></div>
+ </body>
+ <input type="submit" name="submit" id="save"/>
+ <input type="submit" name="stop" id="stop"/>
+ <!-- script javascript or another -->
+ <!-- load jquery -->
+ <script type="text/javascript" src="assets/jquery.js"></script>
+ <script type="text/javascript">
+	//$(document).ready(function(){
+		// jquery proxy digunakan bila proses berada pada berbeda context
+		// contoh simple 
+	    function employee(){
+			this.name = "masyda arrizaqu";
+			this.alamat = "seputih banyak";
+			this.almamater = "stmik akakom";
+			this.show = function(){
+				console.log("name :"+ this.name);
+				console.log("alamat :" +this.alamat);
+				console.log("almamater :"+this.almamater);
+				alert('do work fine.. from another context..');
+			}
+		}
+		//event or proses
+		$('#save').click($.proxy(new employee, "show"));
+	//});
+ </script>
+</html>
