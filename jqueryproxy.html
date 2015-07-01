@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>Learning jquery</title>
+ </head>
+ <body>
+</body>
+ <script type="text/javascript" src="assets/jquery.js"></script>
+ <script type="text/javascript">
+	//$(document).ready(function(){
+		// jquery proxy digunakan bila proses berada pada berbeda context
+		// contoh simple 
+	    function employee(){
+			this.name = "masyda arrizaqu";
+			this.alamat = "seputih banyak";
+			this.almamater = "stmik akakom";
+			this.show = function(){
+				console.log("name :"+ this.name);
+				console.log("alamat :" +this.alamat);
+				console.log("almamater :"+this.almamater);
+				alert('do work fine.. from another context..');
+			}
+		}
+		//event or proses
+		$('#save').click($.proxy(new employee, "show"));
+	//});
+ </script>
+</html>
